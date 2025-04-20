@@ -1,4 +1,14 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+## Stack
+
+ORM: `Prisma`
+
+Language: `Typescript`
+
+Database: `MongoDB`
+
+Styles: `Tailwind`
+
+Framework: `Next.js app router`
 
 ## Getting Started
 
@@ -11,3 +21,23 @@ Run `npm install` to install all of the dependenices. You might need to add `--f
 Run `npx prisma generate` to generate a prisma client.
 
 After you do all of the steps above, you can start the application with `npm run dev`
+
+## Pages
+
+### Protected pages
+
+1. `/admin/edit-post/[postId]`
+2. `/admin/new-post`
+
+### Public pages
+
+1. `/posts`
+2. `/posts/[postId]`
+
+## Route handlers
+
+1. DELETE `/api/posts/[postId]`
+2. GET `/api/posts/[postId]`
+3. GET `/api/posts`
+4. PUT `/api/posts/[postId]`
+5. POST `/api/posts`
