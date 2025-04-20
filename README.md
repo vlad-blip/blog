@@ -36,8 +36,13 @@ After you do all of the steps above, you can start the application with `npm run
 
 ## Route handlers
 
+### Protected
+
 1. DELETE `/api/posts/[postId]`
-2. GET `/api/posts/[postId]`
-3. GET `/api/posts`
-4. PUT `/api/posts/[postId]`
-5. POST `/api/posts`
+2. PUT `/api/posts/[postId]`
+3. POST `/api/posts`
+
+### Public
+
+1. GET `/api/posts/[postId]`
+2. GET `/api/posts`
