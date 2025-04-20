@@ -125,6 +125,18 @@ const QueryError = new Map<string, { message: string; httpStatus: number }>([
 export function prismaError(e: Prisma.PrismaClientKnownRequestError) {
   const queryError = QueryError.get(e.code);
 
+  if (!queryError) {
+    return Response.json(
+      {
+        code: "UNKNOWN",
+        message: "Unknown prisma error",
+      },
+      {
+        status: 400,
+      }
+    );
+  }
+
   return Response.json(
     {
       code: e.code,
